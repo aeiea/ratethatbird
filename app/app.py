@@ -10,7 +10,7 @@ app = flask.Flask(__name__)
 
 app.jinja_env.globals.update(round=round)
 
-birds: list[dict] = json.load(open('birds.json'))
+birds: list[dict] = json.load(open('app/birds.json'))
 
 for i in birds:
     i['name'] = unidecode(i['name'])
