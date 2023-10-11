@@ -48,3 +48,4 @@ def rate():
         return flask.redirect('/')
     else:
         return 'what the hell are you doin'
+app.run(port=443)

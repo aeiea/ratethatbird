@@ -25,12 +25,12 @@
         <h2>{{ bird.name }}</h2>
         <p>{{ bird.description }}</p>
         <img src="{{ bird.image }}" alt="{{ bird.name }}" />
-        <p>Rating: {{ bird.rating }} out of 10</p>
+        <p>Rating: {{ round(bird.rating, 1) }} out of 10</p>
         <form action="/rate" method="post">
           <input type="hidden" name="id" value="{{ bird.id }}" />
           <label for="rating">Rate this bird:</label>
           <input type="range" min="1" max="10" name="rating" value="1" />
-          <input type="submit" value="Rate" class = ''/>
+          <input type="submit" value="Rate" class="" />
         </form>
         <!--<a href="/{{ bird.id }}">Share this bird</a> coming soon to a bird-rater near you -->
       </div>
